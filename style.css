@@ -1,0 +1,69 @@
+/************** reset **************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+footer {
+  margin-top: auto;
+}
+body {
+  background-color: #f0f0ee;
+}
+/************** menu **************/
+header {
+  background-color: #f0f0ee;
+  border-bottom: 0.5px solid rgba(240, 240, 238, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+a img {
+  width: 35px;
+  height: auto;
+}
+header a {
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: #1e1e1e;
+}
+.current_page {
+  opacity: 50%;
+}
+.logo img {
+  display: flex;
+  padding-bottom: 5px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  position: relative;
+}
+.menu_ikoner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+header nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.navbar a:hover {
+  color: #f0f0ee80;
+}
