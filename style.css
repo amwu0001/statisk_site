@@ -15,11 +15,25 @@ footer {
 }
 body {
   background-color: #f0f0ee;
+  padding: 0;
+}
+ul {
+  margin-top: 5rem;
+}
+/************** tekster **************/
+a {
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #1e1e1e;
 }
 /************** menu **************/
+header nav .navbar {
+  display: none;
+}
 header {
   background-color: #f0f0ee;
-  border-bottom: 0.5px solid rgba(240, 240, 238, 0.5);
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,16 +42,6 @@ header {
 a img {
   width: 35px;
   height: auto;
-}
-header a {
-  font-family: "Work Sans", sans-serif;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 100;
-  color: #1e1e1e;
-}
-.current_page {
-  opacity: 50%;
 }
 .logo img {
   display: flex;
@@ -55,15 +59,60 @@ nav {
   align-items: center;
   gap: 40px;
 }
-header nav .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 20px;
+/************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
+
+/*Design og positionering*/
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 6;
 }
-.navbar a:hover {
-  color: #f0f0ee80;
+
+.line1,
+.line2,
+.line3 {
+  width: 40px;
+  height: 1px;
+  background-color: #1e1e1e;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/*Roter første linje*/
+.change .line1 {
+  transform: translate(0, 4px) rotate(-25deg);
+}
+
+/* Fjern anden linje*/
+.change .line2 {
+  opacity: 0;
+}
+
+/* Roter tredje linje*/
+.change .line3 {
+  transform: translate(0, -10px) rotate(25deg);
+}
+@media (min-width: 1000px) {
+  .burger {
+    display: none;
+  }
+  header nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+  header a {
+    font-family: "Work Sans", sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #1e1e1e;
+  }
+  .current_page {
+    color: red;
+  }
 }
