@@ -21,7 +21,9 @@ body {
 ul {
   margin-top: 5rem;
 }
+
 /************** tekster **************/
+
 a {
   font-family: "Work Sans", sans-serif;
   text-decoration: none;
@@ -29,7 +31,9 @@ a {
   font-weight: 100;
   color: #1e1e1e;
 }
+
 /************** menu **************/
+
 header nav .navbar {
   display: none;
 }
@@ -38,7 +42,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   height: 40px;
 }
 main {
@@ -64,6 +68,7 @@ nav {
   align-items: center;
   gap: 40px;
 }
+
 /************** burger (har taget udgangspunkt i eksempel fra w3schools.com) **************/
 
 /*Design og positionering*/
@@ -99,13 +104,20 @@ nav {
 }
 
 /******produktliste****/
+
+.grid_produktliste {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin: 50px 10px;
+}
 .grid_produktliste article {
   border: 0.5px solid #1e1e1e;
   padding: 10px 10px;
   max-width: 300px;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 .grid_produktliste a {
   text-decoration: underline;
@@ -113,33 +125,41 @@ nav {
 .subtle {
   opacity: 50%;
 }
-.small_product .discounted {
+
+.soldout_box {
+  position: absolute;
+  color: #1e1e1e;
+  background: #f0f0ee;
+  padding: 7px 10px;
+  margin: 10px 10px;
+  z-index: 2;
+}
+.soldout_img {
+  filter: brightness(45%);
+}
+.hide {
   display: none;
 }
-.small_product_soldout .discounted {
-  display: none;
+
+/************** kategorier **************/
+
+.category_box {
+  border: 0.5px solid #1e1e1e;
+  height: 100px;
+  width: 300px;
+  text-align: center;
+  display: block;
 }
-.small_product_soldout img {
-  filter: brightness(60%);
+.category_box {
+  padding-top: 35px;
 }
-.small_product_discount_soldout img {
-  filter: brightness(60%);
-}
-.small_product_soldout .sold_out {
-  position: absolute;
-  background: #1e1e1e;
-  color: #f0f0ee;
-  padding: 10px 10px;
-  margin: 10px 10px;
-  z-index: 3;
-}
-.small_product_discount_soldout .sold_out {
-  position: absolute;
-  background: #1e1e1e;
-  color: #f0f0ee;
-  padding: 10px 10px;
-  margin: 10px 10px;
-  z-index: 3;
+.category_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  text-align: center;
+  margin: 50px 10px;
 }
 @media (min-width: 1000px) {
   .burger {
@@ -161,6 +181,7 @@ nav {
     font-weight: 100;
     color: #1e1e1e;
   }
+
   /************** produktliste **************/
 
   .grid_produktliste {
@@ -184,6 +205,9 @@ nav {
     display: flex;
     flex-direction: column;
   }
+
+  /************** kategorier **************/
+
   .category_list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -191,13 +215,5 @@ nav {
     gap: 10px;
     text-align: center;
     margin: 100px 10px;
-  }
-  .category_box {
-    border: 0.5px solid #1e1e1e;
-    height: 100px;
-    text-align: center;
-  }
-  .category_list a {
-    padding-top: 35px;
   }
 }
