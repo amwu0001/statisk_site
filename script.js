@@ -15,7 +15,7 @@ fetch("https://kea-alt-del.dk/t7/api/products/" + id)
 function showProduct(product) {
   console.log(product);
   document.querySelector(".purchaseBox h3").textContent = product.productdisplayname;
-  document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+  document.querySelector(".img_produkt").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
   document.querySelector("p.subtle_produkt").textContent = product.articletype + " - " + product.brandname;
   document.querySelector("dl .name").textContent = product.variantname;
   document.querySelector("dl .color").textContent = product.basecolour;

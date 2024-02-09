@@ -14,7 +14,7 @@ footer {
   margin-top: auto;
 }
 body {
-  background-color: #f0f0ee;
+  background-color: #1e1e1e;
   padding: 0;
   line-height: 1.5rem;
 }
@@ -29,16 +29,28 @@ a {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 100;
-  color: #1e1e1e;
+  color: #f0f0ee;
 }
-
+a:hover {
+  color: rgb(138, 205, 134);
+}
+.overskrift {
+  color: #f0f0ee;
+  font-family: "Work Sans", sans-serif;
+  margin: 80px 50px;
+  font-size: 2rem;
+}
+.smallProduct {
+  color: #f0f0ee;
+  font-family: "Work Sans", sans-serif;
+}
 /************** menu **************/
 
 header nav .navbar {
   display: none;
 }
 header {
-  background-color: #f0f0ee;
+  background-color: #1e1e1e;
   position: fixed;
   top: 0;
   width: 100%;
@@ -83,7 +95,7 @@ nav {
 .line3 {
   width: 40px;
   height: 1px;
-  background-color: #1e1e1e;
+  background-color: #f0f0ee;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -113,7 +125,7 @@ nav {
   margin: 50px 10px;
 }
 .grid_produktliste article {
-  border: 0.5px solid #1e1e1e;
+  border: 0.5px solid #f0f0ee;
   padding: 10px 10px;
   max-width: 300px;
   height: auto;
@@ -128,8 +140,8 @@ nav {
 
 .soldout_box {
   position: absolute;
-  color: #1e1e1e;
-  background: #f0f0ee;
+  color: #f0f0ee;
+  background: #1e1e1e;
   padding: 7px 10px;
   margin: 10px 10px;
   z-index: 2;
@@ -144,7 +156,7 @@ nav {
 /************** kategorier **************/
 
 .category_box {
-  border: 0.5px solid #1e1e1e;
+  border: 0.5px solid #f0f0ee;
   height: 100px;
   width: 300px;
   text-align: center;
@@ -179,7 +191,7 @@ nav {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 100;
-    color: #1e1e1e;
+    color: #f0f0ee;
   }
 
   /************** produktliste **************/
@@ -212,8 +224,35 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    gap: 10px;
+    gap: 20px;
     text-align: center;
-    margin: 100px 10px;
+    margin: 100px 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .category_list a {
+    margin: auto;
+    text-align: center;
+  }
+  /************** Produkt **************/
+
+  .grid_produkt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    border: 0.5px solid #f0f0ee;
+    padding: 10px;
+    margin: 100px 20px;
+    font-family: "Work Sans", sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #f0f0ee;
+  }
+  .grid_produkt img {
+    max-height: 600px;
+    width: auto;
+    margin: auto;
   }
 }
